@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "upw"
+version = "0.1.0"
+description = ""
+authors = ["Luca Dalla Valle <luca.dallavalle@outlook.com>"]
+readme = "README.md"
+packages = [{include = "upw", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = {version = "^0.12.3", extras = ["all"]}
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 20
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
