@@ -9,7 +9,7 @@ def execute(configuration: AppConfiguration) -> None:
     The order is:
       - os
     """
-    updaters = [OsUpdater()]
+    updaters = [OsUpdater(configuration)]
 
     for updater in updaters:
-        updater.update(configuration)
+        updater.update()

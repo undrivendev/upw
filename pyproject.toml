@@ -9,6 +9,7 @@ packages = [{include = "upw", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.12"
 typer = {version = "^0.12.3", extras = ["all"]}
+psutil = "^6.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.7.1"
@@ -17,6 +18,8 @@ pre-commit = "^3.7.1"
 docstring-code-format = true
 docstring-code-line-length = 20
 
+[tool.poetry.scripts]
+upw = "upw.__main__:main"
 
 [build-system]
 requires = ["poetry-core"]
